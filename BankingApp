@@ -1,0 +1,119 @@
+#include <stdio.h>
+
+int main (){
+
+//cherilus Sam Bracley
+//gmail:cherilussambracley@gmail.com
+//Instagram:tech5_09
+
+
+ 
+int total_account = 800;
+
+int transaction;
+transaction = 0;
+
+int CREDIT;
+
+
+
+
+printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> \n");
+
+printf("---MENU--- \n");
+printf("Insert your account number action \n");
+printf("1-Add an account \n");
+printf("2-Retrieve on your account\n");
+printf("3-Add on your account \n");
+printf("4-Show your account \n");
+printf("5-QUIT \n");
+printf("What process that you want to start with  ??? \n");
+
+printf(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> \n");
+
+
+
+int i=0;
+
+while (4>0)
+
+{
+int menu_items_value;
+
+
+scanf("%d", &menu_items_value);
+
+printf("---MENU--- \n");
+
+
+
+   switch (menu_items_value)
+   {
+   case 1:
+    printf("1-Add an account \n");
+    int number_account;
+    printf("Add the number of your account \n");
+    scanf("%d", &number_account);
+    printf("Well, your account number action is %d \n ", number_account);
+    break;
+
+
+   case 2:
+    printf("2-Retrieve your account \n");
+    printf("How many money you want to retrieve on your account ? \n");
+    printf("Your account have actually %d  dollars \n", total_account);
+
+    scanf("%d", &transaction);
+    printf("The count is  %d dollars \n ",transaction);
+
+    if(transaction < total_account){
+      
+       printf("You can go ahead total account is more than this count \n");
+    }else{
+       printf("You can not do that your total account is less than this count\n");
+    }
+
+    break;
+
+
+    case 3:
+    printf("3-Add in your account \n");
+    printf("Process starting... \n");
+    printf("Add the count that you want on your account \n ");
+    
+    scanf("%d", &CREDIT);
+
+    if(CREDIT == 0){
+       printf("You account have the same count %d dollars \n", total_account);
+
+    }
+
+    total_account = total_account+CREDIT; 
+    printf("Your total account is actually %d dollars \n", total_account);
+    break;
+
+
+    case 4:
+    printf("4-Show your account \n");
+    printf("Your total account is %d dollars ", total_account);
+    break;
+
+    case 5:
+    printf("5-QUIT \n");
+    return -1;
+    break;
+  
+
+
+   default:
+    printf("INCORRECT DATA can not handle this action \n");
+       break;
+   } 
+
+    
+}
+
+
+    return 0;
+}
+
